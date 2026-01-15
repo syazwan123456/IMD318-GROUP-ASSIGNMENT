@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kopi Saigon</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="intro-screen">
+  <img src="image/logokopi.webp" class="intro-logo" alt="Kopi Saigon">
+  <p class="intro-tagline">Authentic Vietnamese Coffee</p>
+
+</div>
+
+<nav class="navbar">
+    <div class="logo">Kopi Saigon</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="outlets.html">Outlets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <img src="image/header.jpg" alt="Kopi Saigon Header" class="hero-img">
+
+    <div class="hero-text">
+        <h1>KOPI SAIGON</h1>
+        <p>
+            Brewed with passion, inspired by Saigon streets.
+            A place where coffee meets culture.
+        </p>
+    </div>
+</header>
+
+<section class="news-section">
+    <h2 class="section-title">LATEST NEWS</h2>
+
+    <div class="news-container">
+        <div class="news-card">
+            <img src="image/news1.jpg" alt="News 1">
+            <p>New seasonal coffee now available in all outlets.</p>
+        </div>
+
+        <div class="news-card">
+            <img src="image/news2.jpg" alt="News 2">
+            <p>Opening new branch this coming month.</p>
+        </div>
+
+        <div class="news-card">
+            <img src="image/news3.jpg" alt="News 3">
+            <p>Special collaboration with local roasters.</p>
+        </div>
+    </div>
+</section>
+
+<section class="signature-menu">
+    <h2 class="section-title">SIGNATURE MENU</h2>
+
+    <div class="signature-wrapper">
+
+        <div class="featured-drink">
+            <img src="image/signature-main.jpg" alt="Saigon Signature Coffee">
+        </div>
+
+        <div class="signature-details">
+            <h3>Saigon Black</h3>
+            <p class="signature-desc">
+                Inspired by the bold street coffee of Saigon.
+                Strong aroma, deep flavour, unforgettable finish.
+            </p>
+
+            <div class="other-signatures">
+                <div class="mini-card">
+                    <img src="image/signature-1.jpg" alt="">
+                    <p>Saigon Latte</p>
+                </div>
+
+                <div class="mini-card">
+                    <img src="image/signature-2.jpg" alt="">
+                    <p>coconut milk tea</p>
+                </div>
+
+                <div class="mini-card">
+                    <img src="image/signature-3.jpg" alt="">
+                    <p>Matcha Coconut</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="feedback-section">
+
+  <div class="feedback-left">
+    <div class="idea-card">
+      <h2>Pitch Your Idea</h2>
+      <p>
+       Do you have any bright ideas, suggestions, or feedback for our products and company? 
+	   Don’t keep them to yourself — share them with us. We are always open to listening ☕️
+      </p>
+
+ 
+    </div>
+  </div>
+
+  <div class="feedback-right">
+    <h2>Customer Review</h2>
+
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <textarea id="message" placeholder="Write your review or idea..." required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <div id="reviewList"></div>
+  </div>
+
+</section>
+
+<script>
+  const form = document.getElementById("reviewForm");
+  const reviewList = document.getElementById("reviewList");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const message = document.getElementById("message").value;
+
+    const review = document.createElement("div");
+    review.classList.add("review-item");
+
+    review.innerHTML = `
+      <strong>${name}</strong>
+      <p>${message}</p>
+    `;
+
+    reviewList.prepend(review);
+    form.reset();
+  });
+</script>
+
+
+<footer class="footer">
+    <div class="footer-content">
+  
+        <div class="footer-left">
+            <p>© 2026 Kopi Saigon. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-right">
+            <p class="follow-text">Follow Us</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/kopisaigon"
+                   target="_blank"
+                   class="social-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@kopisaigon</span>
+                </a>
+
+                <a href="https://www.tiktok.com/@kopisaigon"
+                   target="_blank"
+                   class="social-item">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <span>@kopisaigon</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
